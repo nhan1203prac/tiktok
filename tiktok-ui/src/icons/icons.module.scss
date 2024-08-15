@@ -1,0 +1,16 @@
+.wrapper {
+    position: relative;
+}
+.num {
+    position: absolute;
+    top: -19%;
+    right: -29%;
+    font-size: 1.4rem;
+    background: rgb(254, 44, 85);
+    border-radius: 10px;
+    /* min-width: 20px; */
+    /* height: 20px; */
+    padding: 2px 5px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}

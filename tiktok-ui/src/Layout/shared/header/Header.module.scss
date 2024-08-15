@@ -1,0 +1,70 @@
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: var(--default-layout-header-height);
+    background: white;
+    z-index: 10;
+    width: 100%;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 12%);
+    display: flex;
+    justify-content: center;
+}
+.inner {
+    --search-height: 46px;
+    --search-top-spacer: 9px;
+    height: 100%;
+    width: var(--default-layout-width);
+    max-width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    line-height: 100%;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+}
+.action-btn {
+    // font-size: 2.2rem;
+    background: transparent;
+    color: #161823;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+.action-btn svg {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.more-wrapper {
+    font-size: 2rem;
+    margin-left: 28px;
+    background: transparent;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+body .tippy-box {
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    background: rgba(84, 84, 84, 0.72);
+
+    .tippy-content {
+        padding: 8px 9px;
+    }
+}
+.user-avatar {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 12px;
+    cursor: pointer;
+}

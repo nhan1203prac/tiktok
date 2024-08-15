@@ -1,0 +1,15 @@
+.wrapper {
+  width: 100%;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  min-height: 100px;
+  max-height: calc(100vh - 100px);
+  padding-top: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-popper {
+  padding-bottom: 8px;
+}/*# sourceMappingURL=PopperWrapper.module.css.map */

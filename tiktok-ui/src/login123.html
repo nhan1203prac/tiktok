@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+        <title>Login</title>
+    </head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: sans-serif;
+        }
+
+        #wrapper {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-image: url(https://cdn.pixabay.com/photo/2021/07/01/07/02/laptop-6378451_1280.jpg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h2,
+        h3 {
+            color: #fff;
+        }
+        #login {
+            width: 400px;
+            background: rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Căn giữa theo chiều dọc */
+            align-items: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+        h3 {
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        #username,
+        #password {
+            height: 40px;
+            width: 350px;
+
+            border: 1px solid #fff;
+            display: flex;
+            align-items: center;
+        }
+        .username,
+        .password {
+            line-height: 40px;
+            font-size: 20px;
+            border: none;
+            outline: none;
+            background: transparent;
+            color: #fff;
+            padding: 0 10px;
+
+            flex: 1;
+        }
+        .fa-user,
+        .fa-lock {
+            margin-right: 10px;
+            color: #fff;
+        }
+        ::placeholder {
+            color: #fff;
+            text-align: start;
+        }
+        #password {
+            margin-top: 30px;
+        }
+        #help {
+            width: 350px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        span {
+            color: #fff;
+            font-size: 14px;
+        }
+        a {
+            font-size: 14px;
+            color: greenyellow;
+        }
+        button {
+            margin-top: 30px;
+            padding: 10px 20px;
+        }
+    </style>
+    <body>
+        <div id="wrapper">
+            <h2>CLEAN LOGIN FORM</h2>
+            <div id="login">
+                <h3>Login Now</h3>
+                <div id="username">
+                    <input type="text" placeholder="Username" class="username" />
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div id="password">
+                    <input type="text" placeholder="Password" class="password" />
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div id="help">
+                    <div class="forget-password">
+                        <span>Forgot Password?</span>
+                        <a href="">Click here</a>
+                    </div>
+                    <div class="to-register">
+                        <span>New user</span>
+                        <a href="">Register here</a>
+                    </div>
+                </div>
+                <button onclick="getUser()">LOGIN</button>
+            </div>
+        </div>
+        <script>
+            function getUser(data) {
+                fetch('http://localhost:8000/user')
+                    .then((res) => res.json())
+                    .then((data) => {
+                        handleLogin(data);
+                    });
+            }
+            function handleLogin(data) {
+                let username = document.querySelector('.username').value.trim();
+                let password = document.querySelector('.password').value.trim();
+                var loginSuccess = false;
+                data.forEach((item) => {
+                    if (username == item.username && password == item.password) {
+                        window.location.href = 'http://localhost:3000/';
+                        loginSuccess = true;
+                    }
+                });
+                if (loginSuccess) {
+                    alert('Đăng nhập thành công');
+                } else {
+                    alert('không thành công');
+                }
+            }
+        </script>
+    </body>
+</html>

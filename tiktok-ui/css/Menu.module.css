@@ -1,0 +1,35 @@
+.content {
+  width: 224px;
+}
+.content .sereprate {
+  border-top: 10px solid rgba(22, 24, 35, 0.12);
+}
+
+.item-menu:hover {
+  background-color: red;
+}
+
+.header-menu {
+  position: relative;
+  height: 50px;
+  flex-shrink: 0;
+  margin-top: -8px;
+}
+
+.menu-body {
+  overflow-y: auto;
+}
+
+.back-btn {
+  width: 50px;
+  height: 100%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.header-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}/*# sourceMappingURL=Menu.module.css.map */

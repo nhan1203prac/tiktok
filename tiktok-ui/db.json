@@ -1,0 +1,39 @@
+{
+    "user": [
+        {
+            "id": 1,
+            "username": "nhanthanh",
+            "password": 123456
+        },
+        {
+            "id": 2,
+            "username": "Admin",
+            "password": 12032004
+        },
+        {
+            "username": "bgđr",
+            "password": "124563",
+            "id": 3
+        },
+        {
+            "username": "thuytrang",
+            "password": "03042004",
+            "id": 4
+        },
+        {
+            "username": "vtn12032004@gmail.com ",
+            "password": "12345",
+            "id": 5
+        },
+        {
+            "username": "vtn12032004@gmail.com",
+            "password": "12345",
+            "id": 6
+        },
+        {
+            "username": "nhan1203",
+            "password": "12345",
+            "id": 7
+        }
+    ]
+}

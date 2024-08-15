@@ -1,0 +1,40 @@
+.Menu-sidebar-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 8px;
+
+    &:hover {
+        background: rgba(22, 24, 35, 0.03);
+        border-radius: 8px;
+    }
+    &.active {
+        color: var(--primary);
+
+        .icon {
+            display: none;
+        }
+        .activeIcon {
+            display: block;
+        }
+    }
+}
+.menu-sidebar {
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    margin-left: 10px;
+}
+.icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+
+.activeIcon {
+    display: none;
+    width: 32px;
+    height: 32px;
+}
